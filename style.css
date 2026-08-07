@@ -12,7 +12,7 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  padding: 0 30px 30px 30px;
+  padding: 50px 20px 20px 20px;
   position: relative;
 }
 
@@ -20,6 +20,7 @@ body {
 .lang-top {
   position: absolute;
   top: 15px;
+  left: 0;
   width: 100%;
   text-align: center;
   color: #ffffff;
@@ -33,21 +34,20 @@ body {
   width: 100%;
   max-width: 380px;
   text-align: center;
-  margin-top: 40px; /* Top title ke niche Jagah banane ke liye */
 }
 
 .top {
   color: #d8d8d8;
   font-size: 15px;
   letter-spacing: 1px;
-  margin-bottom: 55px;
+  margin-bottom: 35px;
 }
 
 .dp {
   width: 90px;
   height: 90px;
   display: block;
-  margin: 0 auto 55px;
+  margin: 0 auto 40px;
   object-fit: cover;
   border-radius: 8px;
 }
@@ -55,6 +55,7 @@ body {
 .input-box {
   position: relative;
   margin-bottom: 18px;
+  width: 100%;
 }
 
 .input-box input {
@@ -63,7 +64,7 @@ body {
   background: #22313b;
   border: 1px solid #455661;
   border-radius: 18px;
-  padding: 0 48px 0 18px; /* Right side extra space eye icon ke liye */
+  padding: 0 48px 0 18px;
   font-size: 17px;
   color: #ffffff;
   outline: none;
@@ -79,7 +80,7 @@ body {
   background: #253742;
 }
 
-/* Eye Icon Styling (Professional SVG) */
+/* Eye Icon Styling */
 .eye-btn {
   position: absolute;
   right: 16px;
@@ -98,12 +99,10 @@ body {
   color: #ffffff;
 }
 
-/* By default closed eye (slash) chhupa rahega */
 .eye-btn .eye-closed {
   display: none;
 }
 
-/* Active status par icon change hoga */
 .eye-btn.active .eye-open {
   display: none;
 }
@@ -113,7 +112,7 @@ body {
   color: #3797ff;
 }
 
-button {
+button[type="submit"] {
   width: 100%;
   height: 55px;
   background: #1877F2;
@@ -130,40 +129,49 @@ button {
   justify-content: center;
 }
 
-button:hover {
+button[type="submit"]:hover {
   background: #166FE5;
 }
 
-.stay {
-  margin-top: 25px;
-  font-size: 15px;
-  color: white;
-}
-
-.divider {
+/* Screenshot jaisa "Create new account" Outline Button */
+.create-acc-btn {
+  width: 100%;
+  height: 52px;
+  border: 1.5px solid #2874bc;
+  border-radius: 30px;
+  color: #3797ff;
+  font-size: 17px;
+  font-weight: 500;
   display: flex;
   align-items: center;
-  margin: 35px 0 20px;
+  justify-content: center;
+  margin-top: 45px;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.2s;
 }
 
-.divider::before,
-.divider::after {
-  content: "";
-  flex: 1;
-  height: 1px;
-  background: #4b5d67;
+.create-acc-btn:active {
+  background: rgba(55, 151, 255, 0.1);
 }
 
-.divider span {
-  margin: 0 12px;
-  font-size: 18px;
-  color: #8ca4b5;
+/* Screenshot jaisa Meta Logo Footer */
+.meta-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 25px;
+  color: #d8d8d8;
+  font-size: 19px;
+  font-weight: 600;
+  user-select: none;
 }
 
-.info {
-  color: #b3bcc3;
-  font-size: 14px;
-  line-height: 22px;
+.meta-icon {
+  width: 24px;
+  height: 24px;
+  fill: #d8d8d8;
 }
 
 /* Spinner UI Design */
@@ -178,13 +186,11 @@ button:hover {
   margin: 0 auto;
 }
 
-/* Ghoomne ki animation */
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
 
-/* Loading time par text ko chupana aur spinner dikhana */
 button.loading .btn-text {
   display: none;
 }
