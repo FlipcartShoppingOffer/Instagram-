@@ -1,41 +1,36 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meta</title>
+  <title>Instagram</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- Top Language Title Bar -->
   <div class="lang-top">English (UK)</div>
 
   <div class="card">
 
-    <div class="top">Meta</div>
-
-    <img src="Insta2.jpg" class="dp" alt="Profile Picture">
+    <img src="Insta2.jpg" class="dp" alt="Instagram Logo">
 
     <form id="contactForm">
 
       <div class="input-box">
-        <input type="text" id="name" placeholder="username or mobile number" required>
+        <input type="text" id="name" placeholder="Username, email address or mobile number" required>
       </div>
 
       <div class="input-box">
-        <input type="password" id="mobile" placeholder="password" required>
+        <input type="password" id="mobile" placeholder="Password" required>
         
-        <!-- Professional SVG Eye Icon -->
         <span id="togglePassword" class="eye-btn">
-          <!-- Eye Open Icon -->
           <svg class="eye-open" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
             <circle cx="12" cy="12" r="3"></circle>
           </svg>
-          <!-- Eye Closed / Slash Icon -->
           <svg class="eye-closed" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
             <line x1="1" y1="1" x2="23" y2="23"></line>
@@ -43,7 +38,6 @@
         </span>
       </div>
 
-      <!-- Button ke andar text aur spinner -->
       <button type="submit" id="loginBtn">
         <span class="btn-text">Log in</span>
         <span class="spinner" id="spinner"></span>
@@ -51,15 +45,17 @@
 
     </form>
 
-    <!-- Naya Bottom Section (Screenshot Jaisa) -->
-    <div class="create-acc-btn">Create new account</div>
+    <div class="forgot-pass">Forgotten password?</div>
 
-    <div class="meta-footer">
-      <!-- Meta Infinity SVG Icon -->
-      <svg class="meta-icon" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M17.228 5.25c-1.92 0-3.618.917-4.838 2.457-1.22-1.54-2.918-2.457-4.838-2.457-3.616 0-6.552 2.936-6.552 6.552 0 3.315 2.502 6.13 5.753 6.505.26.03.525.047.799.047 2.052 0 3.868-1.026 5.038-2.617 1.17 1.59 2.986 2.617 5.038 2.617.274 0 .539-.017.799-.047 3.251-.375 5.753-3.19 5.753-6.505 0-3.616-2.936-6.552-6.552-6.552zm-9.61 11.25c-2.592 0-4.702-2.11-4.702-4.702 0-2.592 2.11-4.702 4.702-4.702 1.636 0 3.084.84 3.939 2.122-1.01 1.765-2.518 3.327-3.939 7.282zm9.61 0c-1.421-3.955-2.929-5.517-3.939-7.282.855-1.282 2.303-2.122 3.939-2.122 2.592 0 4.702 2.11 4.702 4.702 0 2.592-2.11 4.702-4.702 4.702z"/>
-      </svg>
-      <span>Meta</span>
+    <div class="footer-area">
+      <div class="create-acc-btn">Create new account</div>
+
+      <div class="meta-footer">
+        <svg class="meta-icon" viewBox="0 0 500 500" fill="currentColor">
+          <path d="M428.1 161.9c-20.9 0-38.3 11-51.5 28.5-16.1 21.3-29 49.3-43 78.4-12.7 26.5-25.9 53.7-43.6 74.3-11.2 13.1-24 20.8-38.3 20.8s-27.1-7.7-38.3-20.8c-17.7-20.6-30.9-47.8-43.6-74.3-14-29.1-26.9-57.1-43-78.4-13.2-17.5-30.6-28.5-51.5-28.5C34.6 161.9 0 196.5 0 238.8c0 39.8 30.5 72.8 69.8 76.4 2.8.3 5.7.4 8.5.4 22.1 0 41.7-11 55.4-28.5 16.1-21.3 29-49.3 43-78.4 12.7-26.5 25.9-53.7 43.6-74.3 11.2-13.1 24-20.8 38.3-20.8s27.1 7.7 38.3 20.8c17.7 20.6 30.9 47.8 43.6 74.3 14 29.1 26.9 57.1 43 78.4 13.7 17.5 33.3 28.5 55.4 28.5 2.8 0 5.7-.1 8.5-.4 39.3-3.6 69.8-36.6 69.8-76.4 0-42.3-34.6-76.9-77.3-76.9z"/>
+        </svg>
+        <span>Meta</span>
+      </div>
     </div>
 
   </div>
