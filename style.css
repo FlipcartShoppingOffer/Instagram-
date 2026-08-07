@@ -1,4 +1,3 @@
-/* style.css */
 * {
   margin: 0;
   padding: 0;
@@ -7,24 +6,31 @@
 }
 
 body {
-  background: #18242d;
+  background: #121d24; /* Original background */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  min-height: 100vh;
-  padding: 20px;
-  position: relative;
+  min-height: 100vh; /* Full screen height */
+  /* Mobile browser address bar fix */
+  min-height: -webkit-fill-available;
+  padding: 10px 20px 15px 20px; /* Reduced vertical padding */
+  overflow: hidden; /* Scrollbar hatane ke liye */
+}
+
+/* Mobile browser height fix */
+html {
+  height: -webkit-fill-available;
 }
 
 .lang-top {
   width: 100%;
   text-align: center;
-  color: #8c9da8;
+  color: #92a4b0;
   font-size: 13px;
-  font-weight: 400;
-  margin-top: 10px;
   user-select: none;
+  /* Top se thoda kam gap */
+  margin-top: 5px;
 }
 
 .card {
@@ -34,17 +40,18 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex-grow: 1;
-  justify-content: center;
+  /* Content ko center mein karne ke liye */
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .dp {
-  width: 72px;
-  height: 72px;
+  width: 68px;
+  height: 68px;
   display: block;
-  margin: 0 auto 70px auto;
   object-fit: contain;
-  border-radius: 18px;
+  /* Spacing kam kar di */
+  margin: 0 auto 30px auto;
 }
 
 form {
@@ -60,22 +67,23 @@ form {
 .input-box input {
   width: 100%;
   height: 52px;
-  background: #1c2b35;
-  border: 1px solid #324450;
+  background: #1b2831;
+  border: 1px solid #2d3e4a;
   border-radius: 12px;
   padding: 0 45px 0 16px;
   font-size: 14px;
   color: #ffffff;
   outline: none;
-  transition: border-color 0.2s;
+  text-overflow: ellipsis;
 }
 
 .input-box input::placeholder {
-  color: #798b96;
+  color: #728491;
+  font-size: 14px;
 }
 
 .input-box input:focus {
-  border-color: #3797ff;
+  border-color: #0064e0;
 }
 
 .eye-btn {
@@ -84,11 +92,9 @@ form {
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
-  color: #798b96;
+  color: #728491;
   display: flex;
   align-items: center;
-  justify-content: center;
-  user-select: none;
 }
 
 .eye-btn .eye-closed {
@@ -118,17 +124,12 @@ button[type="submit"] {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background 0.2s;
-}
-
-button[type="submit"]:active {
-  background: #0056c6;
 }
 
 .forgot-pass {
-  color: #ffffff;
+  color: #e4e6eb;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
   margin-top: 18px;
   cursor: pointer;
   user-select: none;
@@ -137,28 +138,27 @@ button[type="submit"]:active {
 .footer-area {
   width: 100%;
   max-width: 360px;
-  margin-top: auto;
-  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  /* Footer area screen ke thoda upar rahe */
+  margin-bottom: 10px;
 }
 
 .create-acc-btn {
   width: 100%;
   height: 44px;
-  border: 1px solid #0064e0;
+  border: 1px solid #1f3f60;
   border-radius: 22px;
-  color: #0064e0;
+  color: #3897f0;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  user-select: none;
   background: transparent;
-}
-
-.create-acc-btn:active {
-  background: rgba(0, 100, 224, 0.1);
 }
 
 .meta-footer {
@@ -166,19 +166,20 @@ button[type="submit"]:active {
   align-items: center;
   justify-content: center;
   gap: 5px;
-  margin-top: 14px;
-  color: #ffffff;
-  font-size: 15px;
+  color: #cbd5e1;
+  font-size: 14px;
   font-weight: 600;
   user-select: none;
+  margin-top: 2px;
 }
 
 .meta-icon {
-  width: 18px;
-  height: 18px;
-  fill: #ffffff;
+  width: 16px;
+  height: 16px;
+  fill: #cbd5e1;
 }
 
+/* Spinner UI */
 .spinner {
   display: none;
   width: 18px;
@@ -200,4 +201,16 @@ button.loading .btn-text {
 
 button.loading .spinner {
   display: block;
+}
+
+/* Height Fix for very small screens */
+@media (max-height: 568px) {
+  .dp {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+  }
+  .input-box input {
+    height: 45px;
+  }
 }
