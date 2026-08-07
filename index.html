@@ -5,212 +5,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Instagram</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    }
-
-    html {
-      height: 100%;
-    }
-
-    body {
-      background: #121d24;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-between;
-      height: 100vh;
-      height: 100dvh;
-      padding: 10px 20px 12px 20px;
-      overflow: hidden;
-    }
-
-    .lang-top {
-      width: 100%;
-      text-align: center;
-      color: #92a4b0;
-      font-size: 13px;
-      margin-top: 2px;
-      user-select: none;
-    }
-
-    .card {
-      width: 100%;
-      max-width: 360px;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin: auto 0;
-    }
-
-    /* Instagram Gradient SVG Logo Styling */
-    .insta-svg-logo {
-      width: 62px;
-      height: 62px;
-      margin: 0 auto 28px auto;
-      display: block;
-    }
-
-    form {
-      width: 100%;
-    }
-
-    .input-box {
-      position: relative;
-      margin-bottom: 10px;
-      width: 100%;
-    }
-
-    .input-box input {
-      width: 100%;
-      height: 48px;
-      background: #1b2831;
-      border: 1px solid #2d3e4a;
-      border-radius: 12px;
-      padding: 0 42px 0 14px;
-      font-size: 13.5px;
-      color: #ffffff;
-      outline: none;
-      text-overflow: ellipsis;
-    }
-
-    .input-box input::placeholder {
-      color: #728491;
-      font-size: 13px;
-    }
-
-    .input-box input:focus {
-      border-color: #0064e0;
-    }
-
-    .eye-btn {
-      position: absolute;
-      right: 14px;
-      top: 50%;
-      transform: translateY(-50%);
-      cursor: pointer;
-      color: #728491;
-      display: flex;
-      align-items: center;
-    }
-
-    .eye-btn .eye-closed {
-      display: none;
-    }
-
-    .eye-btn.active .eye-open {
-      display: none;
-    }
-
-    .eye-btn.active .eye-closed {
-      display: block;
-      color: #0064e0;
-    }
-
-    button[type="submit"] {
-      width: 100%;
-      height: 44px;
-      background: #0064e0;
-      border: none;
-      border-radius: 22px;
-      color: #ffffff;
-      font-size: 14px;
-      font-weight: 600;
-      cursor: pointer;
-      margin-top: 4px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .forgot-pass {
-      color: #e4e6eb;
-      font-size: 14px;
-      font-weight: 600;
-      margin-top: 16px;
-      cursor: pointer;
-      user-select: none;
-    }
-
-    .footer-area {
-      width: 100%;
-      max-width: 360px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 8px;
-      padding-bottom: 4px;
-    }
-
-    .create-acc-btn {
-      width: 100%;
-      height: 42px;
-      border: 1px solid #1f3f60;
-      border-radius: 21px;
-      color: #3897f0;
-      font-size: 14px;
-      font-weight: 600;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      background: transparent;
-    }
-
-    .meta-footer {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 5px;
-      color: #cbd5e1;
-      font-size: 14px;
-      font-weight: 600;
-      user-select: none;
-    }
-
-    .meta-icon {
-      width: 16px;
-      height: 16px;
-      fill: #cbd5e1;
-    }
-
-    .spinner {
-      display: none;
-      width: 18px;
-      height: 18px;
-      border: 2px solid rgba(255, 255, 255, 0.3);
-      border-top: 2px solid #ffffff;
-      border-radius: 50%;
-      animation: spin 0.8s linear infinite;
-    }
-
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-
-    button.loading .btn-text {
-      display: none;
-    }
-
-    button.loading .spinner {
-      display: block;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+  <!-- Top Language Selector -->
   <div class="lang-top">English (UK)</div>
 
+  <!-- Main Login Card Area -->
   <div class="card">
 
-    <!-- Instagram Official Gradient SVG Icon -->
+    <!-- Instagram Official Gradient Vector SVG -->
     <svg class="insta-svg-logo" viewBox="0 0 24 24">
       <defs>
         <radialGradient id="instaGrad" cx="0.2" cy="1" r="1">
@@ -225,6 +31,7 @@
       <path fill="url(#instaGrad)" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
     </svg>
 
+    <!-- Login Form -->
     <form id="contactForm">
 
       <div class="input-box">
@@ -257,6 +64,7 @@
 
   </div>
 
+  <!-- Bottom Action & Meta Branding -->
   <div class="footer-area">
     <div class="create-acc-btn">Create new account</div>
 
