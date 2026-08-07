@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #18242d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 30px;
+}
+
+.card {
+  width: 100%;
+  max-width: 380px;
+  text-align: center;
+}
+
+.top {
+  color: #d8d8d8;
+  font-size: 15px;
+  letter-spacing: 1px;
+  margin-bottom: 55px;
+}
+
+.dp {
+  width: 90px;
+  height: 90px;
+  display: block;
+  margin: 0 auto 55px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.input-box {
+  position: relative;
+  margin-bottom: 18px;
+}
+
+.input-box input {
+  width: 100%;
+  height: 58px;
+  background: #22313b;
+  border: 1px solid #455661;
+  border-radius: 18px;
+  padding: 0 48px 0 18px; /* Right side extra space eye icon ke liye */
+  font-size: 17px;
+  color: #ffffff;
+  outline: none;
+  transition: .3s;
+}
+
+.input-box input::placeholder {
+  color: #9daab3;
+}
+
+.input-box input:focus {
+  border-color: #3797ff;
+  background: #253742;
+}
+
+/* Eye Icon Styling (Professional SVG) */
+.eye-btn {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #9daab3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  transition: color 0.3s;
+}
+
+.eye-btn:hover {
+  color: #ffffff;
+}
+
+/* By default closed eye (slash) chhupa rahega */
+.eye-btn .eye-closed {
+  display: none;
+}
+
+/* Active status par icon change hoga */
+.eye-btn.active .eye-open {
+  display: none;
+}
+
+.eye-btn.active .eye-closed {
+  display: block;
+  color: #3797ff;
+}
+
+button {
+  width: 100%;
+  height: 55px;
+  background: #1877F2;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: .3s;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button:hover {
+  background: #166FE5;
+}
+
+.stay {
+  margin-top: 25px;
+  font-size: 15px;
+  color: white;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 35px 0 20px;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #4b5d67;
+}
+
+.divider span {
+  margin: 0 12px;
+  font-size: 18px;
+  color: #8ca4b5;
+}
+
+.info {
+  color: #b3bcc3;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+/* Spinner UI Design */
+.spinner {
+  display: none;
+  width: 22px;
+  height: 22px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top: 3px solid #ffffff;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin: 0 auto;
+}
+
+/* Ghoomne ki animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Loading time par text ko chupana aur spinner dikhana */
+button.loading .btn-text {
+  display: none;
+}
+
+button.loading .spinner {
+  display: block;
+}
