@@ -12,7 +12,7 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  padding: 50px 20px 20px 20px;
+  padding: 0 30px 30px 30px;
   position: relative;
 }
 
@@ -20,7 +20,6 @@ body {
 .lang-top {
   position: absolute;
   top: 15px;
-  left: 0;
   width: 100%;
   text-align: center;
   color: #ffffff;
@@ -34,20 +33,21 @@ body {
   width: 100%;
   max-width: 380px;
   text-align: center;
+  margin-top: 40px; /* Top title ke niche Jagah banane ke liye */
 }
 
 .top {
   color: #d8d8d8;
   font-size: 15px;
   letter-spacing: 1px;
-  margin-bottom: 35px;
+  margin-bottom: 55px;
 }
 
 .dp {
   width: 90px;
   height: 90px;
   display: block;
-  margin: 0 auto 40px;
+  margin: 0 auto 55px;
   object-fit: cover;
   border-radius: 8px;
 }
@@ -55,7 +55,6 @@ body {
 .input-box {
   position: relative;
   margin-bottom: 18px;
-  width: 100%;
 }
 
 .input-box input {
@@ -64,7 +63,7 @@ body {
   background: #22313b;
   border: 1px solid #455661;
   border-radius: 18px;
-  padding: 0 48px 0 18px;
+  padding: 0 48px 0 18px; /* Right side extra space eye icon ke liye */
   font-size: 17px;
   color: #ffffff;
   outline: none;
@@ -80,7 +79,7 @@ body {
   background: #253742;
 }
 
-/* Eye Icon Styling */
+/* Eye Icon Styling (Professional SVG) */
 .eye-btn {
   position: absolute;
   right: 16px;
@@ -99,10 +98,12 @@ body {
   color: #ffffff;
 }
 
+/* By default closed eye (slash) chhupa rahega */
 .eye-btn .eye-closed {
   display: none;
 }
 
+/* Active status par icon change hoga */
 .eye-btn.active .eye-open {
   display: none;
 }
@@ -142,7 +143,7 @@ button:hover {
 .divider {
   display: flex;
   align-items: center;
-  margin: 30px 0 20px;
+  margin: 35px 0 20px;
 }
 
 .divider::before,
@@ -177,11 +178,13 @@ button:hover {
   margin: 0 auto;
 }
 
+/* Ghoomne ki animation */
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
 
+/* Loading time par text ko chupana aur spinner dikhana */
 button.loading .btn-text {
   display: none;
 }
