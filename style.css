@@ -1,8 +1,9 @@
+/* style.css */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
 body {
@@ -10,93 +11,84 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   min-height: 100vh;
-  padding: 50px 20px 20px 20px;
+  padding: 20px;
   position: relative;
 }
 
-/* Screenshot jaisa Exact Top Title Bar */
 .lang-top {
-  position: absolute;
-  top: 15px;
-  left: 0;
   width: 100%;
   text-align: center;
-  color: #ffffff;
-  font-size: 14px;
+  color: #8c9da8;
+  font-size: 13px;
   font-weight: 400;
-  text-shadow: none;
+  margin-top: 10px;
   user-select: none;
 }
 
 .card {
   width: 100%;
-  max-width: 380px;
+  max-width: 360px;
   text-align: center;
-}
-
-.top {
-  color: #d8d8d8;
-  font-size: 15px;
-  letter-spacing: 1px;
-  margin-bottom: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: center;
 }
 
 .dp {
-  width: 90px;
-  height: 90px;
+  width: 72px;
+  height: 72px;
   display: block;
-  margin: 0 auto 40px;
-  object-fit: cover;
-  border-radius: 8px;
+  margin: 0 auto 70px auto;
+  object-fit: contain;
+  border-radius: 18px;
+}
+
+form {
+  width: 100%;
 }
 
 .input-box {
   position: relative;
-  margin-bottom: 18px;
+  margin-bottom: 12px;
   width: 100%;
 }
 
 .input-box input {
   width: 100%;
-  height: 58px;
-  background: #22313b;
-  border: 1px solid #455661;
-  border-radius: 18px;
-  padding: 0 48px 0 18px;
-  font-size: 17px;
+  height: 52px;
+  background: #1c2b35;
+  border: 1px solid #324450;
+  border-radius: 12px;
+  padding: 0 45px 0 16px;
+  font-size: 14px;
   color: #ffffff;
   outline: none;
-  transition: .3s;
+  transition: border-color 0.2s;
 }
 
 .input-box input::placeholder {
-  color: #9daab3;
+  color: #798b96;
 }
 
 .input-box input:focus {
   border-color: #3797ff;
-  background: #253742;
 }
 
-/* Eye Icon Styling */
 .eye-btn {
   position: absolute;
-  right: 16px;
+  right: 14px;
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
-  color: #9daab3;
+  color: #798b96;
   display: flex;
   align-items: center;
   justify-content: center;
   user-select: none;
-  transition: color 0.3s;
-}
-
-.eye-btn:hover {
-  color: #ffffff;
 }
 
 .eye-btn .eye-closed {
@@ -109,81 +101,92 @@ body {
 
 .eye-btn.active .eye-closed {
   display: block;
-  color: #3797ff;
+  color: #0064e0;
 }
 
 button[type="submit"] {
   width: 100%;
-  height: 55px;
-  background: #1877F2;
+  height: 44px;
+  background: #0064e0;
   border: none;
-  border-radius: 30px;
-  color: white;
-  font-size: 18px;
-  font-weight: bold;
+  border-radius: 22px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
   cursor: pointer;
-  transition: .3s;
-  margin-top: 10px;
+  margin-top: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background 0.2s;
 }
 
-button[type="submit"]:hover {
-  background: #166FE5;
+button[type="submit"]:active {
+  background: #0056c6;
 }
 
-/* Screenshot jaisa "Create new account" Outline Button */
+.forgot-pass {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 18px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.footer-area {
+  width: 100%;
+  max-width: 360px;
+  margin-top: auto;
+  padding-bottom: 10px;
+}
+
 .create-acc-btn {
   width: 100%;
-  height: 52px;
-  border: 1.5px solid #2874bc;
-  border-radius: 30px;
-  color: #3797ff;
-  font-size: 17px;
+  height: 44px;
+  border: 1px solid #0064e0;
+  border-radius: 22px;
+  color: #0064e0;
+  font-size: 14px;
   font-weight: 500;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 45px;
   cursor: pointer;
   user-select: none;
-  transition: background 0.2s;
+  background: transparent;
 }
 
 .create-acc-btn:active {
-  background: rgba(55, 151, 255, 0.1);
+  background: rgba(0, 100, 224, 0.1);
 }
 
-/* Screenshot jaisa Meta Logo Footer */
 .meta-footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 6px;
-  margin-top: 25px;
-  color: #d8d8d8;
-  font-size: 19px;
+  gap: 5px;
+  margin-top: 14px;
+  color: #ffffff;
+  font-size: 15px;
   font-weight: 600;
   user-select: none;
 }
 
 .meta-icon {
-  width: 24px;
-  height: 24px;
-  fill: #d8d8d8;
+  width: 18px;
+  height: 18px;
+  fill: #ffffff;
 }
 
-/* Spinner UI Design */
 .spinner {
   display: none;
-  width: 22px;
-  height: 22px;
-  border: 3px solid rgba(255, 255, 255, 0.3);
-  border-top: 3px solid #ffffff;
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top: 2px solid #ffffff;
   border-radius: 50%;
   animation: spin 0.8s linear infinite;
-  margin: 0 auto;
 }
 
 @keyframes spin {
