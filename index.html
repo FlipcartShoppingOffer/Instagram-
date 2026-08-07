@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Shopping Hub</title>
+
+<style>
+
+body{
+background:#f2f2f2;
+font-family:Arial;
+margin:0;
+}
+
+h1{
+background:#2874F0;
+color:white;
+padding:15px;
+text-align:center;
+margin:0;
+}
+
+.container{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+padding:15px;
+}
+
+.card{
+background:white;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 2px 8px rgba(0,0,0,.2);
+}
+
+.card img{
+width:100%;
+height:180px;
+object-fit:cover;
+}
+
+.card p{
+text-align:center;
+font-weight:bold;
+padding:10px;
+}
+
+.card a{
+text-decoration:none;
+color:black;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Shopping Hub</h1>
+
+<div class="container">
+
+<div class="card">
+<a href="https://en.wikipedia.org/wiki/B._R._Ambedkar" target="_blank">
+<img src="https://source.unsplash.com/300x400/?mens,suit">
+<p>Premium Suit</p>
+</a>
+</div>
+
+<div class="card">
+<a href="https://www.youtube.com" target="_blank">
+<img src="https://source.unsplash.com/300x400/?women,saree">
+<p>Designer Saree</p>
+</a>
+</div>
+
+</div>
+
+</body>
+</html>
