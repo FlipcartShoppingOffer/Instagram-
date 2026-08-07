@@ -5,34 +5,33 @@
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
+html {
+  height: 100%;
+}
+
 body {
-  background: #121d24; /* Original background */
+  background: #121d24;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  min-height: 100vh; /* Full screen height */
-  /* Mobile browser address bar fix */
-  min-height: -webkit-fill-available;
-  padding: 10px 20px 15px 20px; /* Reduced vertical padding */
-  overflow: hidden; /* Scrollbar hatane ke liye */
+  height: 100vh;
+  height: 100dvh; /* Mobile browser bottom bar fix */
+  padding: 10px 20px 14px 20px;
+  overflow: hidden;
 }
 
-/* Mobile browser height fix */
-html {
-  height: -webkit-fill-available;
-}
-
+/* Top language text */
 .lang-top {
   width: 100%;
   text-align: center;
   color: #92a4b0;
   font-size: 13px;
+  margin-top: 4px;
   user-select: none;
-  /* Top se thoda kam gap */
-  margin-top: 5px;
 }
 
+/* Center Form Container */
 .card {
   width: 100%;
   max-width: 360px;
@@ -40,38 +39,38 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* Content ko center mein karne ke liye */
-  margin-top: auto;
+  /* Logo aur form ko upar positioning dene ke liye */
+  margin-top: 12vh;
   margin-bottom: auto;
 }
 
-.dp {
-  width: 68px;
-  height: 68px;
+/* Instagram Gradient SVG Logo */
+.insta-svg-logo {
+  width: 58px;
+  height: 58px;
+  margin: 0 auto 36px auto; /* Logo aur inputs ke beech ka gap */
   display: block;
-  object-fit: contain;
-  /* Spacing kam kar di */
-  margin: 0 auto 30px auto;
 }
 
 form {
   width: 100%;
 }
 
+/* Input Box Alignment */
 .input-box {
   position: relative;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   width: 100%;
 }
 
 .input-box input {
   width: 100%;
-  height: 52px;
+  height: 48px;
   background: #1b2831;
   border: 1px solid #2d3e4a;
   border-radius: 12px;
-  padding: 0 45px 0 16px;
-  font-size: 14px;
+  padding: 0 42px 0 14px;
+  font-size: 13.5px;
   color: #ffffff;
   outline: none;
   text-overflow: ellipsis;
@@ -79,13 +78,14 @@ form {
 
 .input-box input::placeholder {
   color: #728491;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .input-box input:focus {
   border-color: #0064e0;
 }
 
+/* Eye Toggle Icon Position */
 .eye-btn {
   position: absolute;
   right: 14px;
@@ -110,6 +110,7 @@ form {
   color: #0064e0;
 }
 
+/* Log in Button */
 button[type="submit"] {
   width: 100%;
   height: 44px;
@@ -130,27 +131,27 @@ button[type="submit"] {
   color: #e4e6eb;
   font-size: 14px;
   font-weight: 600;
-  margin-top: 18px;
+  margin-top: 16px;
   cursor: pointer;
   user-select: none;
 }
 
+/* Bottom Footer Container */
 .footer-area {
   width: 100%;
   max-width: 360px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
-  /* Footer area screen ke thoda upar rahe */
-  margin-bottom: 10px;
+  gap: 8px;
+  padding-bottom: 2px;
 }
 
 .create-acc-btn {
   width: 100%;
-  height: 44px;
+  height: 42px;
   border: 1px solid #1f3f60;
-  border-radius: 22px;
+  border-radius: 21px;
   color: #3897f0;
   font-size: 14px;
   font-weight: 600;
@@ -170,7 +171,6 @@ button[type="submit"] {
   font-size: 14px;
   font-weight: 600;
   user-select: none;
-  margin-top: 2px;
 }
 
 .meta-icon {
@@ -179,7 +179,7 @@ button[type="submit"] {
   fill: #cbd5e1;
 }
 
-/* Spinner UI */
+/* Loading Spinner */
 .spinner {
   display: none;
   width: 18px;
@@ -201,16 +201,4 @@ button.loading .btn-text {
 
 button.loading .spinner {
   display: block;
-}
-
-/* Height Fix for very small screens */
-@media (max-height: 568px) {
-  .dp {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 20px;
-  }
-  .input-box input {
-    height: 45px;
-  }
 }
